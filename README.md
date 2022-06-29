@@ -1,4 +1,4 @@
-# CrptoInspect
+# CryptoInspect
 
 
 **CryptoInspect** is an online platform that aims to become a free access crypto dashboard that allow users to visualize blockchain information with an intuitive user friendly interface in combination with the powerful covalent API that delivers up to date and organized blockchain data .
