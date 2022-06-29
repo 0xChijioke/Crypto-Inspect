@@ -48,6 +48,6 @@ Developed with
 - [supernovahs](https://twitter.com/harshit16024263) </br>
 - [Yves Ganza](https://twitter.com/lebon_yg) </br>
 - [chrontast](https://twitter.com/chrontast) </br>
-- [Leo ldsanchez](https://twitter.com/ldsanchez) </br>
+- [LScorpion - Leo](https://twitter.com/0xLScorpion) </br>
 - [EngrGord](https://twitter.com/Chijoke_) </br>
 
