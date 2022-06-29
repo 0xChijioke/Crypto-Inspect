@@ -21,31 +21,24 @@ export default function Gasdata(props) {
       moment(date1).format("YYYY-MM-DD"),
       moment(date2).format("YYYY-MM-DD")
     );
-    if (isInDateRange) {
-
-      console.log("inrange");
-    }
-    console.log("propsaddress", props.address);
 
     if (item.from_address != props.address.toLowerCase()) {
       if (isDateRangeSelected && isInDateRange) {
-        console.log("true money receive");
-        valuereceivedmainnet += (item.value / (10 ** 18));
+        valuereceivedmainnet += item.value / 10 ** 18;
       }
 
       if (isDateRangeSelected === false) {
-        // valuereceivedmainnet += item.value / 10 ** 18;
+        valuereceivedmainnet += item.value / 10 ** 18;
       }
     }
 
     if (item.from_address == props.address.toLowerCase()) {
       if (isDateRangeSelected && isInDateRange) {
-        console.log("true");
         gasspentmainnet += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
       }
 
       if (isDateRangeSelected === false) {
-        // gasspentmainnet += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
+        gasspentmainnet += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
       }
     }
   });
@@ -61,7 +54,7 @@ export default function Gasdata(props) {
       }
 
       if (isDateRangeSelected === false) {
-        // valuereceivedpolygon += item.value / 10 ** 18;
+        valuereceivedpolygon += item.value / 10 ** 18;
       }
     }
 
@@ -71,7 +64,7 @@ export default function Gasdata(props) {
       }
 
       if (isDateRangeSelected === false) {
-        // gasspentpolygon += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
+        gasspentpolygon += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
       }
     }
   });
@@ -83,11 +76,11 @@ export default function Gasdata(props) {
     );
     if (item.from_address != props.address.toLowerCase()) {
       if (isDateRangeSelected && isInDateRange) {
-        valuereceivedoptimism += ((item.value) / (10 ** 18));
+        valuereceivedoptimism += item.value / 10 ** 18;
       }
 
       if (isDateRangeSelected === false) {
-        // valuereceivedoptimism += item.value / 10 ** 18;
+        valuereceivedoptimism += item.value / 10 ** 18;
       }
     }
 
@@ -97,12 +90,10 @@ export default function Gasdata(props) {
       }
 
       if (isDateRangeSelected === false) {
-        // gasspentoptimism += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
+        gasspentoptimism += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
       }
     }
   });
-
-  console.log("mainnet", Number(valuereceivedmainnet));
 
   return (
     <>
@@ -129,14 +120,13 @@ export default function Gasdata(props) {
         <div className="stat">
           <div className="stat-title text-secondary">Mainnet</div>
           <div className="stat-value flex justify-center ">
-            <span> Gas Spent ${Number(gasspentmainnet).toFixed(1)}</span>
+            <span>${Number(gasspentmainnet).toFixed(1)}</span>
             <span className="mx-2">
               <BiGasPump />
             </span>
           </div>
           <div className="stat-desc flex justify-center  text-primary font-bold text-lg">
-            <span>Receipts in ETH(By other  EOAs) </span>
-            <span>{Number(valuereceivedmainnet).toFixed(2)}</span>
+            <span>{Number(valuereceivedmainnet).toFixed(4)} </span>
             <span>
               <FaEthereum />
             </span>
@@ -146,13 +136,13 @@ export default function Gasdata(props) {
         <div className="stat">
           <div className="stat-title text-secondary">Polygon</div>
           <div className="stat-value flex justify-center ">
-            <span> Gas Spent ${Number(gasspentpolygon).toFixed(1)}</span>
+            <span>${Number(gasspentpolygon).toFixed(1)}</span>
             <span className="mx-2">
               <BiGasPump />
             </span>
           </div>
           <div className="stat-desc flex justify-center text-primary font-bold text-lg ">
-            <span>Receipts in ETH(By other  EOAs){Number(valuereceivedpolygon).toFixed(4)} </span>
+            <span>{Number(valuereceivedpolygon).toFixed(4)} </span>
             <span>
               <FaEthereum />
             </span>
@@ -162,13 +152,13 @@ export default function Gasdata(props) {
         <div className="stat">
           <div className="stat-title text-secondary">Optimism</div>
           <div className="stat-value flex justify-center ">
-            <span> Gas Spent${Number(gasspentoptimism).toFixed(1)}</span>
+            <span>${Number(gasspentoptimism).toFixed(1)}</span>
             <span className="mx-2">
               <BiGasPump />
             </span>
           </div>
           <div className="stat-desc flex justify-center text-primary font-bold text-lg">
-            <span> Receipts in ETH(By other  EOAs){Number(valuereceivedoptimism).toFixed(4)} </span>
+            <span>{Number(valuereceivedoptimism).toFixed(4)} </span>
             <span>
               <FaEthereum />
             </span>
