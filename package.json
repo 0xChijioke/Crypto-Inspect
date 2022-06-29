@@ -10,6 +10,10 @@
     "vercel:deploy": "vercel deploy"
   },
   "dependencies": {
+    "@date-io/date-fns": "^2.14.0",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.6",
     "@rainbow-me/rainbowkit": "^0.3.3",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.2",
@@ -22,6 +26,7 @@
     "next": "12.1.6",
     "next-themes": "^0.2.0",
     "react": "18.2.0",
+    "react-datepicker": "^4.8.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "wagmi": "^0.4.12"
