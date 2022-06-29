@@ -35,6 +35,7 @@ Developed with
 
 ## Usage
 - [Demo App Site](https://crypto-inspect.vercel.app/)
+- [SlideDeck](https://github.com/EngrGord/Crypto-Inspect/blob/main/file/Crypto%20inspect.pdf)
 - [Video Demo](https://www.youtube.com/)
 
 ## Contributors
