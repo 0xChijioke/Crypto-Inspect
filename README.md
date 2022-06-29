@@ -23,6 +23,8 @@ This project would not be possible without the invaluable contributions of [Naim
 
 ![Transactions](https://github.com/EngrGord/Crypto-Inspect/blob/main/file/transaction.png)
 
+![Transactions Sankey Chart](https://user-images.githubusercontent.com/5996795/176482290-14cdd02e-f244-419a-9af4-6e84d6555066.png)
+
 
 ## Development
 Developed with 
