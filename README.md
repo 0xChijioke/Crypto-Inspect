@@ -30,6 +30,7 @@ Developed with
 - [Tailwind](https://tailwindcss.com/)
 - [Rainbow SDK](https://www.rainbowkit.com/docs/installation)
 - [Lightweight-charts](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/)
+- [Apache ECharts](https://echarts.apache.org/en/index.html)
 - [Covalent Blockchain Data API](https://www.covalenthq.com/docs/developer/)
 
 ## Covalent API Endpoints
