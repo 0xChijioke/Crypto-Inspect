@@ -41,7 +41,7 @@ Developed with
 ## Usage
 - [Demo App Site](https://crypto-inspect.vercel.app/)
 - [SlideDeck](https://github.com/EngrGord/Crypto-Inspect/blob/main/file/Crypto%20inspect.pdf)
-- [Video Demo](https://www.youtube.com/)
+- [Video Demo](https://youtu.be/NiQraRw6lVU)
 
 ## Contributors
 - [Naim Bijapure](https://naim-bijapure.github.io/) </br>
