@@ -10,9 +10,9 @@ export default function Gasdata(props) {
   let gasspentoptimism = 0;
 
   //   console.log("range", props.range);
-  let isDateRangeSelected = props.range.includes(false) === false;
-  let date1 = moment(props.range[0]);
-  let date2 = moment(props.range[1]);
+  let isDateRangeSelected = props.range !== null ? props.range.includes(false) === false : false;
+  let date1 = moment(props.range !== null && props.range[0]);
+  let date2 = moment(props.range !== null && props.range[1]);
 
   props.mainnetdata.data.items.map((item, i) => {
     let isInDateRange = moment(item.block_signed_at).isBetween(
