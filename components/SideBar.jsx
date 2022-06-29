@@ -39,7 +39,7 @@ const SideBar = () => {
   return (
     <>
       {/* desktop sidebar */}
-      <div className="h-screen sticky text-white top-0 px-4 py-8  border-r dark:bg-gray-800 dark:border-gray-600 hidden lg:block">
+      <div className="h-screen sticky text--white top-0 px-4 py-8  border-r dark:bg-gray-800 dark:border-gray-600 hidden lg:block">
         <h2 className="text-3xl font-semibold text-primary">🧐CryptoInspect</h2>
 
         <SearchAddress />

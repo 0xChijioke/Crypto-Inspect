@@ -117,7 +117,7 @@ return (
         />
       </div>
       <div className=" py-10 flex justify-center">
-        <button onClick={handleEvent} className={"btn btn-primary"}>Button</button>
+        <button onClick={handleEvent} className={"btn btn-primary"}>Submit</button>
       </div>
       
       <div className="overflow-x-auto w-full   lg:flex lg:justify-center lg:items-end lg:flex-col">
