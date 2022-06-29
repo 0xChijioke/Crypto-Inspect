@@ -305,13 +305,7 @@ const CoinPriceChart = () => {
         </div>
       </div>
       <h1 className="text-xl text-center p-4">{tokenPrice?.contract_name} Price Chart</h1>
-      <div
-        className="justify-center flex margin-auto"
-        ref={elRef}
-        id="container"
-
-        // key={theme}
-      ></div>
+      <div className="justify-center flex margin-auto" ref={elRef} id="container"></div>
     </div>
   );
 };
