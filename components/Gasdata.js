@@ -126,7 +126,7 @@ export default function Gasdata(props) {
             </span>
           </div>
           <div className="stat-desc flex justify-center  text-primary font-bold text-lg">
-            <span>{Number(valuereceivedmainnet).toFixed(4)} </span>
+            <span>{Number(valuereceivedmainnet).toFixed(2)} </span>
             <span>
               <FaEthereum />
             </span>
