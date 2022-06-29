@@ -13,6 +13,7 @@ import SearchAddress from "./SearchAddress";
 export const routes = [
   { tabName: "Home", pageName: "/", icon: <AiOutlineHome /> },
   { tabName: "Charts", pageName: "/Charts", icon: <AiOutlineAreaChart /> },
+  { tabName: "Sankey Chart", pageName: "/SankeyChart", icon: <BiLineChart /> },
   { tabName: "Events", pageName: "/Events", icon: <AiOutlinePieChart /> },
   { tabName: "Transcactions", pageName: "/Transcactions", icon: <BiLineChart /> },
 ];
