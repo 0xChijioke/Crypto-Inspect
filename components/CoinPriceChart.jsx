@@ -71,10 +71,7 @@ const CoinPriceChart = () => {
 
     if (elRef.current != null) {
       chartRef.current?.remove();
-      elRef.current.key="col"
-      console.log('elRef: ', elRef.current);
       const container = elRef.current;
-      console.log("container: ", container);
 
       if (theme != "light") {
         const chart = createChart(container, {
