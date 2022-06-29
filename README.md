@@ -11,7 +11,7 @@ This application is also mobile responsive.<br />
 
 This project is built to fulfil the GR14 hackathon(GR14: Web3 Application General Purpose Bounty (Covalent)<br />
 
-This project will not be possible without the invaluable contributions of [Naim Bijapure](https://naim-bijapure.github.io/) in every area of this project.
+This project would not be possible without the invaluable contributions of [Naim Bijapure](https://naim-bijapure.github.io/) in every area of this project.
 
 ![Home](https://github.com/EngrGord/Crypto-Inspect/blob/main/file/home.png)
 
