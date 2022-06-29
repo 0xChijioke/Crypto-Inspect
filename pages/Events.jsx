@@ -71,7 +71,7 @@ return (
         </span>
         <input
           type="text"
-          className="w-full py-2 pl-10 pr-4 bg-transparent border rounded-md dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          className="w-full py-2 pl-10 pr-4 bg-transparent border rounded-md dark-:border-gray-600 focus:border-blue-400 dark-:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
           placeholder="Enter contract Address"
           onChange={e => setContractAdd(e.target.value)}
           
@@ -90,7 +90,7 @@ return (
         </span>
         <input
           type="text"
-          className="w-full py-2 pl-10 pr-4 bg-transparent rounded-md dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          className="w-full py-2 pl-10 pr-4 bg-transparent rounded-md dark-:border-gray-600 focus:border-blue-400 dark-:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
           placeholder="Enter Topic"
           onChange={e => setTopic(e.target.value)}
         />
@@ -98,20 +98,20 @@ return (
       <div className="relative mt-6 justify-center flex">
         <input
           type="number"
-          className="w-1/4 py-2 pl-10 pr-4 bg-transparent border rounded-md dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          className="w-1/4 py-2 pl-10 pr-4 bg-transparent border rounded-md dark-:border-gray-600 focus:border-blue-400 dark-:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
           placeholder="Starting Block"
           onChange={e => setStart(e.target.value)}
         />
         <input
           type="number"
-          className="w-1/4 py-2 mx-10 pl-10 pr-4 border rounded-md bg-transparent dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          className="w-1/4 py-2 mx-10 pl-10 pr-4 border rounded-md bg-transparent dark-:border-gray-600 focus:border-blue-400 dark-:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
           placeholder="Ending Block"
           onChange={e => setEnd(e.target.value)}
           
         />
         <input
           type="number"
-          className="w-1/4 py-2 pl-10 pr-4 border rounded-md bg-transparent dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          className="w-1/4 py-2 pl-10 pr-4 border rounded-md bg-transparent dark-:border-gray-600 focus:border-blue-400 dark-:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
           placeholder="Chain ID 1 by default"
           onChange={e => setChainId(e.target.value)}
         />
