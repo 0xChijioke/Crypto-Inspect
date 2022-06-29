@@ -1,5 +1,7 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
+import { BiGasPump } from "react-icons/bi";
+import { FaEthereum } from "react-icons/fa";
 
 export default function Gasdata(props) {
   let valuereceivedmainnet = 0;
@@ -95,22 +97,72 @@ export default function Gasdata(props) {
 
   return (
     <>
-      <div>
-        <div style={{ border: "2px solid black" }}>
+      {/* <div className="flex justify-around">
+        <div>
           <h2>Mainnet</h2>
           <h3>Receipts from EOAs: {Number(valuereceivedmainnet)} ETH</h3>
           <h3>Gas Fees paid till Date: ${Number(gasspentmainnet)}</h3>
         </div>
 
-        <div style={{ border: "2px solid black" }}>
+        <div>
           <h2>Polygon</h2>
           <h3>Receipts from EOAs: {Number(valuereceivedpolygon)} ETH</h3>
           <h3>Gas Fees paid till Date: ${Number(gasspentpolygon)}</h3>
         </div>
-        <div style={{ border: "2px solid black" }}>
+        <div>
           <h2>Optimism</h2>
           <h3>Receipts from EOAs: {Number(valuereceivedoptimism)} ETH</h3>
           <h3>Gas Fees paid till Date: ${Number(gasspentoptimism)}</h3>
+        </div>
+      </div> */}
+
+      <div className="stats stats-vertical lg:stats-horizontal shadow w-full text-center my-2">
+        <div className="stat">
+          <div className="stat-title text-secondary">Mainnet</div>
+          <div className="stat-value flex justify-center ">
+            <span>${Number(gasspentmainnet).toFixed(1)}</span>
+            <span className="mx-2">
+              <BiGasPump />
+            </span>
+          </div>
+          <div className="stat-desc flex justify-center  text-primary font-bold text-lg">
+            <span>{Number(valuereceivedmainnet).toFixed(4)} </span>
+            <span>
+              <FaEthereum />
+            </span>
+          </div>
+        </div>
+
+        <div className="stat">
+          <div className="stat-title text-secondary">Polygon</div>
+          <div className="stat-value flex justify-center ">
+            <span>${Number(gasspentpolygon).toFixed(1)}</span>
+            <span className="mx-2">
+              <BiGasPump />
+            </span>
+          </div>
+          <div className="stat-desc flex justify-center text-primary font-bold text-lg ">
+            <span>{Number(valuereceivedpolygon).toFixed(4)} </span>
+            <span>
+              <FaEthereum />
+            </span>
+          </div>
+        </div>
+
+        <div className="stat">
+          <div className="stat-title text-secondary">Optimism</div>
+          <div className="stat-value flex justify-center ">
+            <span>${Number(gasspentoptimism).toFixed(1)}</span>
+            <span className="mx-2">
+              <BiGasPump />
+            </span>
+          </div>
+          <div className="stat-desc flex justify-center text-primary font-bold text-lg">
+            <span>{Number(valuereceivedoptimism).toFixed(4)} </span>
+            <span>
+              <FaEthereum />
+            </span>
+          </div>
         </div>
       </div>
     </>
