@@ -120,13 +120,13 @@ export default function Gasdata(props) {
         <div className="stat">
           <div className="stat-title text-secondary">Mainnet</div>
           <div className="stat-value flex justify-center ">
-            <span>${Number(gasspentmainnet).toFixed(1)}</span>
+            <span> Gas Spent ${Number(gasspentmainnet).toFixed(1)}</span>
             <span className="mx-2">
               <BiGasPump />
             </span>
           </div>
           <div className="stat-desc flex justify-center  text-primary font-bold text-lg">
-            <span>{Number(valuereceivedmainnet).toFixed(4)} </span>
+            <span> Receipts in ETH (from EOAs){Number(valuereceivedmainnet).toFixed(4)} </span>
             <span>
               <FaEthereum />
             </span>
@@ -136,13 +136,13 @@ export default function Gasdata(props) {
         <div className="stat">
           <div className="stat-title text-secondary">Polygon</div>
           <div className="stat-value flex justify-center ">
-            <span>${Number(gasspentpolygon).toFixed(1)}</span>
+            <span>Gas Spent ${Number(gasspentpolygon).toFixed(1)}</span>
             <span className="mx-2">
               <BiGasPump />
             </span>
           </div>
           <div className="stat-desc flex justify-center text-primary font-bold text-lg ">
-            <span>{Number(valuereceivedpolygon).toFixed(4)} </span>
+            <span>Receipts in ETH (from EOAs){Number(valuereceivedpolygon).toFixed(4)} </span>
             <span>
               <FaEthereum />
             </span>
@@ -152,13 +152,13 @@ export default function Gasdata(props) {
         <div className="stat">
           <div className="stat-title text-secondary">Optimism</div>
           <div className="stat-value flex justify-center ">
-            <span>${Number(gasspentoptimism).toFixed(1)}</span>
+            <span>Gas Spent ${Number(gasspentoptimism).toFixed(1)}</span>
             <span className="mx-2">
               <BiGasPump />
             </span>
           </div>
           <div className="stat-desc flex justify-center text-primary font-bold text-lg">
-            <span>{Number(valuereceivedoptimism).toFixed(4)} </span>
+            <span>Receipts in ETH (from EOAs){Number(valuereceivedoptimism).toFixed(4)} </span>
             <span>
               <FaEthereum />
             </span>
