@@ -25,23 +25,31 @@ const SearchAddress = () => {
   return (
     <>
       <div className="relative mt-6">
-        <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-          <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"></path>
-          </svg>
-        </span>
-        <input
-          type="text"
-          className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
-          placeholder="Enter Address"
-          onChange={debouncedResults}
-          // onBlur={debouncedResults}
-        />
+        <div className="form-control">
+          <div className="input-group">
+            <input
+              type="text"
+              placeholder="Enter Address"
+              className="input input-bordered"
+              onChange={debouncedResults}
+            />
+            <button className="btn btn-square btn-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );
