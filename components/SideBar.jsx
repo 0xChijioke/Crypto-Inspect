@@ -13,9 +13,9 @@ import SearchAddress from "./SearchAddress";
 export const routes = [
   { tabName: "Home", pageName: "/", icon: <AiOutlineHome /> },
   { tabName: "Charts", pageName: "/Charts", icon: <AiOutlineAreaChart /> },
+  { tabName: "Sankey Chart", pageName: "/SankeyChart", icon: <BiLineChart /> },
   { tabName: "Events", pageName: "/Events", icon: <AiOutlinePieChart /> },
   { tabName: "Transcactions", pageName: "/Transcactions", icon: <BiLineChart /> },
-  { tabName: "Gas Guzzler", pageName: "/GasGuzzler", icon: <BiGasPump /> },
 ];
 
 const SideBar = () => {
@@ -40,7 +40,7 @@ const SideBar = () => {
   return (
     <>
       {/* desktop sidebar */}
-      <div className="h-screen sticky text--white top-0 px-4 py-8  border-r dark:bg-gray-800 dark:border-gray-600 hidden lg:block">
+      <div className="h-screen sticky text--white top-0 px-4 py-8  border-r  hidden lg:block">
         <h2 className="text-2xl font-semibold text-primary"> Crypto 🧐 Inspect</h2>
 
         <SearchAddress />
