@@ -21,24 +21,31 @@ export default function Gasdata(props) {
       moment(date1).format("YYYY-MM-DD"),
       moment(date2).format("YYYY-MM-DD")
     );
+    if (isInDateRange) {
+
+      console.log("inrange");
+    }
+    console.log("propsaddress", props.address);
 
     if (item.from_address != props.address.toLowerCase()) {
       if (isDateRangeSelected && isInDateRange) {
-        valuereceivedmainnet += item.value / 10 ** 18;
+        console.log("true money receive");
+        valuereceivedmainnet += (item.value / (10 ** 18));
       }
 
       if (isDateRangeSelected === false) {
-        valuereceivedmainnet += item.value / 10 ** 18;
+        // valuereceivedmainnet += item.value / 10 ** 18;
       }
     }
 
     if (item.from_address == props.address.toLowerCase()) {
       if (isDateRangeSelected && isInDateRange) {
+        console.log("true");
         gasspentmainnet += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
       }
 
       if (isDateRangeSelected === false) {
-        gasspentmainnet += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
+        // gasspentmainnet += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
       }
     }
   });
@@ -54,7 +61,7 @@ export default function Gasdata(props) {
       }
 
       if (isDateRangeSelected === false) {
-        valuereceivedpolygon += item.value / 10 ** 18;
+        // valuereceivedpolygon += item.value / 10 ** 18;
       }
     }
 
@@ -64,7 +71,7 @@ export default function Gasdata(props) {
       }
 
       if (isDateRangeSelected === false) {
-        gasspentpolygon += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
+        // gasspentpolygon += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
       }
     }
   });
@@ -76,11 +83,11 @@ export default function Gasdata(props) {
     );
     if (item.from_address != props.address.toLowerCase()) {
       if (isDateRangeSelected && isInDateRange) {
-        valuereceivedoptimism += item.value / 10 ** 18;
+        valuereceivedoptimism += ((item.value) / (10 ** 18));
       }
 
       if (isDateRangeSelected === false) {
-        valuereceivedoptimism += item.value / 10 ** 18;
+        // valuereceivedoptimism += item.value / 10 ** 18;
       }
     }
 
@@ -90,10 +97,12 @@ export default function Gasdata(props) {
       }
 
       if (isDateRangeSelected === false) {
-        gasspentoptimism += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
+        // gasspentoptimism += (item.fees_paid / 10 ** 18) * item.gas_quote_rate;
       }
     }
   });
+
+  console.log("mainnet", Number(valuereceivedmainnet));
 
   return (
     <>

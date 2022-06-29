@@ -56,8 +56,8 @@ export default function GasCalculator() {
     setLoading(false);
     setnooftx(optimismdata?.length);
   };
-
   let accountAddress = state.searchedAddress ? state.searchedAddress : state.address;
+
   return (
     <>
       {/* <h1 className="text-3xl font-medium rounded-md bg-violet-300 px-6 py-2 ">Gas Guzzler</h1> */}
@@ -120,7 +120,7 @@ export default function GasCalculator() {
             polygondata={polygondata}
             mainnetdata={mainnetdata}
             optimismdata={optimismdata}
-            address={address}
+            address={accountAddress}
             range={dateRange}
           />
         </div>
