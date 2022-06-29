@@ -9,15 +9,22 @@ export default function Gasdata(props) {
     let valuereceivedoptimism = 0;
     let gasspentoptimism = 0;
 
+    console.log("range", props.range);
+    // console.log("inclue", String(props.range[0]).include("Jun"));
 
 
 
     props.mainnetdata.data.items.map((item, i) => {
+        console.log("date", (item.block_signed_at).charAt(8));
+        console.log("date", (item.block_signed_at).charAt(9));
+        console.log("date", (item.block_signed_at).charAt(5));
+        console.log("date", (item.block_signed_at).charAt(6));
+
 
         if (item.from_address != (props.address.toLowerCase())) {
-
-            console.log("true")
-            console.log(item.from_address, props.address.toLowerCase());
+            // console.log("date", (item.block_signed_at).charAt(8));
+            // console.log("true")
+            // if (props.range[0].include("Jun") && )
             valuereceivedmainnet += (item.value) / 10 ** 18;
 
         }

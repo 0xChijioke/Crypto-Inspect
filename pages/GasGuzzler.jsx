@@ -2,11 +2,9 @@ import { useState } from "react";
 import Gasdata from "../components/Gasdata";
 import API from "../utils/API";
 import { COVALENT_KEY } from "../constants";
-import Box from "@mui/material/Box";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-
+import DateRangePicker from "@wojtekmaj/react-daterange-picker/dist/entry.nostyle";
+import "@wojtekmaj/react-daterange-picker/dist/DateRangePicker.css";
+import "react-calendar/dist/Calendar.css";
 export default function GasCalculator() {
   const [address, setaddress] = useState("");
   const [mainnetdata, setmainnetdata] = useState(null);
@@ -14,9 +12,8 @@ export default function GasCalculator() {
   const [optimismdata, setoptimismdata] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [nooftx, setnooftx] = useState(null);
-  const [startDate, setStartDate] = useState();
-  const [value, setValue] = (React.useState < Date) | (null > new Date());
-
+  const [value, onChange] = useState([new Date(), new Date()]);
+  console.log("onchange", value);
   const getdata = async (client) => {
     setLoading(true);
     let responsemainnet = await API.get(
@@ -24,6 +21,7 @@ export default function GasCalculator() {
         `${client}` +
         `/transactions_v2/?quote-currency=USD&format=JSON&block-signed-at-asc=false&no-logs=true&key=${COVALENT_KEY}`
     );
+    console.log("responesemainnet", responsemainnet);
 
     let itemsdatamainnet = responsemainnet.data;
     setmainnetdata(itemsdatamainnet);
@@ -72,22 +70,17 @@ export default function GasCalculator() {
         Lifetime gas Paid
       </button>
 
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <DatePicker
-          label="Custom input"
-          value={value}
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={({ inputRef, inputProps, InputProps }) => (
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <input ref={inputRef} {...inputProps} />
-              {InputProps?.endAdornment}
-            </Box>
-          )}
-        />
-      </LocalizationProvider>
+      <div>
+        <DateRangePicker format="y-m-dd" onChange={onChange} value={value} />
+      </div>
 
+      <button
+        className="rounded-none bg-violet-400 hover:bg-sky-400 px-5 text-2xl "
+        onClick={() => {
+          getdata(address);
+        }}>
+        Gas Data for this range
+      </button>
       {isLoading ? <p>Loading...</p> : null}
 
       {!isLoading && mainnetdata && polygondata && optimismdata && (
@@ -98,6 +91,7 @@ export default function GasCalculator() {
               mainnetdata={mainnetdata}
               optimismdata={optimismdata}
               address={address}
+              range={value}
             />
           }
         </div>
