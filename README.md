@@ -1,10 +1,15 @@
 # CryptoInspect
 
 
-**CryptoInspect** is an online platform that aims to become a free access crypto dashboard that allow users to visualize blockchain information with an intuitive user friendly interface in combination with the powerful covalent API that delivers up to date and organized blockchain data .
+**CryptoInspect** is an online platform that aims to become a free access crypto dashboard that allow users to visualize blockchain information with an intuitive user friendly interface in combination with the powerful covalent API that delivers up to date and organized blockchain data .<br />
+
+
 This project also allows users to connect their wallet which can be used to inspect address transactions on the Transaction page.
-This application is also mobile responsive.
-This project is built to fulfil the GR14 hackathon(GR14: Web3 Application General Purpose Bounty (Covalent)
+
+
+This application is also mobile responsive.<br />
+
+This project is built to fulfil the GR14 hackathon(GR14: Web3 Application General Purpose Bounty (Covalent)<br />
 
 This project will not be possible without the invaluable contributions of [Naim Bijapure](https://naim-bijapure.github.io/) in every area of this project.
 
