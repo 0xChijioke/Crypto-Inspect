@@ -64,23 +64,14 @@ export default function GasCalculator() {
       <button
         className="rounded-none bg-violet-400 hover:bg-sky-400 px-5 text-2xl "
         onClick={() => {
-          console.log(address);
-          getdata(address);
-        }}>
-        Lifetime gas Paid
-      </button>
-
-      <div>
-        <DateRangePicker format="y-m-dd" onChange={onChange} value={value} />
-      </div>
-
-      <button
-        className="rounded-none bg-violet-400 hover:bg-sky-400 px-5 text-2xl "
-        onClick={() => {
           getdata(address);
         }}>
         Gas Data for this range
       </button>
+      <div>
+        <DateRangePicker onChange={onChange} value={value} />
+      </div>
+
       {isLoading ? <p>Loading...</p> : null}
 
       {!isLoading && mainnetdata && polygondata && optimismdata && (

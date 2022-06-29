@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-
+const moment = require("moment");
 export default function Gasdata(props) {
     let valuereceivedmainnet = 0;
     let gasspentmainnet = 0;
@@ -9,64 +9,65 @@ export default function Gasdata(props) {
     let valuereceivedoptimism = 0;
     let gasspentoptimism = 0;
 
-    console.log("range", props.range);
-    // console.log("inclue", String(props.range[0]).include("Jun"));
-
-
 
     props.mainnetdata.data.items.map((item, i) => {
-        console.log("date", (item.block_signed_at).charAt(8));
-        console.log("date", (item.block_signed_at).charAt(9));
-        console.log("date", (item.block_signed_at).charAt(5));
-        console.log("date", (item.block_signed_at).charAt(6));
-
+        let input = moment(item.block_signed_at).format("DD-MM-YYYY");
 
         if (item.from_address != (props.address.toLowerCase())) {
-            // console.log("date", (item.block_signed_at).charAt(8));
-            // console.log("true")
-            // if (props.range[0].include("Jun") && )
-            valuereceivedmainnet += (item.value) / 10 ** 18;
+
+            if (input > moment(props.range[0]).format("DD-MM-YYYY") && input < moment(props.range[1]).format("DD-MM-YYYY")) {
+
+                valuereceivedmainnet += (item.value) / 10 ** 18;
+            }
 
         }
 
         if (item.from_address == (props.address.toLowerCase())) {
-            gasspentmainnet += (((item.fees_paid) / 10 ** 18) * item.gas_quote_rate);
+            if (input > moment(props.range[0]).format("DD-MM-YYYY") && input < moment(props.range[1]).format("DD-MM-YYYY")) {
+
+                gasspentmainnet += (((item.fees_paid) / 10 ** 18) * item.gas_quote_rate);
+            }
         }
 
     })
 
     props.polygondata.data.items.map((item, i) => {
+        let input = moment(item.block_signed_at).format("DD-MM-YYYY");
 
         if (item.from_address != (props.address.toLowerCase())) {
+            if (input > moment(props.range[0]).format("DD-MM-YYYY") && input < moment(props.range[1]).format("DD-MM-YYYY")) {
 
-            console.log("true")
-            console.log(item.from_address, props.address.toLowerCase());
-            valuereceivedpolygon += (item.value) / 10 ** 18;
+                valuereceivedpolygon += (item.value) / 10 ** 18;
+            }
 
         }
 
         if (item.from_address == (props.address.toLowerCase())) {
-            gasspentpolygon += (((item.fees_paid) / 10 ** 18) * item.gas_quote_rate);
+            if (input > moment(props.range[0]).format("DD-MM-YYYY") && input < moment(props.range[1]).format("DD-MM-YYYY")) {
+                gasspentpolygon += (((item.fees_paid) / 10 ** 18) * item.gas_quote_rate);
+            }
         }
 
     })
 
     props.optimismdata.data.items.map((item, i) => {
+        let input = moment(item.block_signed_at).format("DD-MM-YYYY");
 
         if (item.from_address != (props.address.toLowerCase())) {
+            if (input > moment(props.range[0]).format("DD-MM-YYYY") && input < moment(props.range[1]).format("DD-MM-YYYY")) {
 
-            console.log("true")
-            console.log(item.from_address, props.address.toLowerCase());
-            valuereceivedoptimism += (item.value) / 10 ** 18;
+                valuereceivedoptimism += (item.value) / 10 ** 18;
+            }
 
         }
 
         if (item.from_address == (props.address.toLowerCase())) {
-            gasspentoptimism += (((item.fees_paid) / 10 ** 18) * item.gas_quote_rate);
+            if (input > moment(props.range[0]).format("DD-MM-YYYY") && input < moment(props.range[1]).format("DD-MM-YYYY")) {
+                gasspentoptimism += (((item.fees_paid) / 10 ** 18) * item.gas_quote_rate);
+            }
         }
 
     })
-
 
 
 
