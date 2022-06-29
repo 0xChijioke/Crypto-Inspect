@@ -6,6 +6,15 @@ This project also allows users to connect their wallet which can be used to insp
 This application is also mobile responsive.
 This project is built to fulfil the GR14 hackathon(GR14: Web3 Application General Purpose Bounty (Covalent))
 
+![Home](https://github.com/EngrGord/Crypto-Inspect/blob/main/file/home.png)
+
+![Token Charts](https://github.com/EngrGord/Crypto-Inspect/blob/main/file/charts.png)
+
+![Events](https://github.com/EngrGord/Crypto-Inspect/blob/main/file/events.png)
+
+**NOTE**: The Events inputs has default values for demo purposes. A new input will overide these values.
+
+![Transactions](https://github.com/EngrGord/Crypto-Inspect/blob/main/file/transaction.png)
 
 
 ## Development
@@ -26,13 +35,11 @@ Developed with
 - [Demo App Site](https://crypto-inspect.vercel.app/)
 - [Video Demo](https://www.youtube.com/)
 
-## Team
-- [Naim Bijapure]() </br>
-- []() </br>
-- [chrontast]() </br>
-- [Leo ldsanchez]() </br>
+## Contributors
+- [Naim Bijapure](https://naim-bijapure.github.io/) </br>
+- [supernovahs](https://twitter.com/harshit16024263) </br>
+- [Yves Ganza](https://twitter.com/lebon_yg) </br>
+- [chrontast](https://twitter.com/chrontast) </br>
+- [Leo ldsanchez](https://twitter.com/ldsanchez) </br>
 - [EngrGord](https://twitter.com/Chijoke_) </br>
 
-
-## License
-[GPLv3](LICENSE)
